@@ -6,9 +6,9 @@
 
 在实现功能以前，请按照以下要求准备开发环境：
 
-- Android Studio 4.1 以上版本。
-- Android API 级别 16 或以上。
-- 两台运行 Android 4.1 或以上版本的移动设备
+- xcode 14以上版本。
+- iOS SDK 级别 13 或以上。
+- 两台运行 iOS 13.0 或以上版本的移动设备
 - 可以访问互联网的计算机。如果你的网络环境部署了防火墙，参考[应对防火墙限制](https://doc.shengwang.cn/doc/rtc/android/basic-features/firewall)以正常使用声网服务。
 - 一个有效的声网账号以及声网项目。请参考[开通服务](https://doc.shengwang.cn/doc/rtc/android/get-started/enable-service)从声网控制台获得以下信息：
   - App ID：声网随机生成的字符串，用于识别你的项目。
@@ -20,15 +20,15 @@
 
 1. 进入到[后台](https://console.shengwang.cn/)项目里，复制后台的 **App Id** 并备注，稍后启动应用时会用到它
 2. （可选）如果开启安全模式，则使用**临时 token 生成器**生成一个频道的RTC产品临时token，复制**频道名**和 **Token** 并备注，稍后启动应用时会用到它
-3. 编辑 `app/src/main/java/io/agora/quickstart/rtc/MainActivity.java`，将你的 AppID 、频道名、Token 分别替换到 `<#Your App ID#>` 、 `<#Your channel name#>`、`<#Your Token#>`
+3. 编辑 `Agora-RTC-QuickStart/iOS/Agora-RTC-QuickStart/Agora-RTC-QuickStart/ViewController.Swift`，将你的 AppID 、频道名、Token 分别替换到 `<#Your App ID#>` 、 `<#Your channel name#>`、`<#Your Token#>`
 
 ```
 // 填写项目的 App ID，可在声网控制台中生成
-private String appId = "<#Your App ID#>";
+private let appId: String = "<#Your App ID#>";
 // 填写频道名
-private String channelName = "<#Your channel name#>";
+private let channelName: String = "<#Your channel name#>";
 // 填写声网控制台中生成的临时 Token
-private String token = "<#Your Token#>";
+private let token: String = "<#Your Token#>";
 ```
 
 然后你就可以编译并运行项目了。
