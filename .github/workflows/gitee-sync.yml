@@ -16,7 +16,7 @@ jobs:
       - name: Gitee sync repo
         uses: Yikun/hub-mirror-action@v1.3
         with:
-          src: github/AgoraIO
+          src: github/AgoraIO-Community
           dst: gitee/agoraio-community
           white_list: "Agora-RTC-QuickStart"
           static_list: "Agora-RTC-QuickStart"
