@@ -8,7 +8,7 @@
 | 平台 | 语言 | 项目位置                                                 | SDK                                                                                                                             |
 | -------- | -------- |------------------------------------------------------| ------------------------------------------------------------------------------------------------------------------------------- |
 | Android  | Java     | [Agora-RTC-QuickStart](Agora-RTC-QuickStart/Android) | [RTC Java Video SDK](https://doc.shengwang.cn/doc/rtc/android/resources) |
-| iOS      | Swift    | [(https://github.com/AgoraIO-Community/Agora-RTC-QuickStart/tree/feat/agora_rtc_quickstart/iOS/Agora-RTC-QuickStart-iOS) | [RTC Java Video SDK](https://doc.shengwang.cn/doc/rtc/ios/resources) |
+| iOS      | Swift    | [Agora-RTC-QuickStart](https://github.com/AgoraIO-Community/Agora-RTC-QuickStart/tree/feat/agora_rtc_quickstart/iOS/Agora-RTC-QuickStart-iOS) | [RTC Swift Video SDK](https://doc.shengwang.cn/doc/rtc/ios/resources) |
 
 你可以进入不同平台的项目进行试用或参考源代码。
 
