@@ -5,5 +5,5 @@ inhibit_all_warnings!
 
 target 'Agora-RTC-QuickStart-iOS' do
  use_frameworks!
-# pod 'AgoraRtcEngine_iOS'
+ pod 'AgoraRtcEngine_iOS'
 end
