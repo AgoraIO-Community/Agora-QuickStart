@@ -30,6 +30,7 @@ private String channelName = "<#Your channel name#>";
 // 填写声网控制台中生成的临时 Token
 private String token = "<#Your Token#>";
 ```
+4. 使用Android Studio打开[Android/Agora-RTC-QuickStart-Android](.)，等待下载依赖并同步成功
 
 然后你就可以编译并运行项目了。
 
