@@ -30,7 +30,8 @@ private let channelName: String = "<#Your channel name#>";
 // 填写声网控制台中生成的临时 Token
 private let token: String = "<#Your Token#>";
 ```
-
+4. 使用pod install 命令
+5. 使用xcode打开 Agora-RTC-QuickStart-iOS.xcworkspace
 然后你就可以编译并运行项目了。
 
 ## 联系我们
