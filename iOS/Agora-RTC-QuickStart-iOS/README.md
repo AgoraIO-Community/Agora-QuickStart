@@ -19,7 +19,7 @@
 这个段落主要讲解了如何编译和运行实例程序。
 
 1. 进入到[后台](https://console.shengwang.cn/)项目里，复制后台的 **App Id** 并备注，稍后启动应用时会用到它
-2. （可选）如果开启安全模式，则使用**[临时 token 生成器](https://docportal.shengwang.cn/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms#%E8%8E%B7%E5%8F%96%E4%B8%B4%E6%97%B6-token)**生成一个频道的RTC产品临时token，复制**频道名**和 **Token** 并备注，稍后启动应用时会用到它
+2. （可选）如果开启安全模式，则使用[临时 token 生成器](https://docportal.shengwang.cn/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms#%E8%8E%B7%E5%8F%96%E4%B8%B4%E6%97%B6-token)生成一个频道的RTC产品临时token，复制**频道名**和 **Token** 并备注，稍后启动应用时会用到它
 3. 编辑 `Agora-RTC-QuickStart/iOS/Agora-RTC-QuickStart/Agora-RTC-QuickStart/ViewController.Swift`，将你的 AppID 、频道名、Token 分别替换到 `<#Your App ID#>` 、 `<#Your channel name#>`、`<#Your Token#>`
 
 ```
