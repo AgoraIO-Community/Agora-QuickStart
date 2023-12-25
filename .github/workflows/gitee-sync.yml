@@ -25,4 +25,4 @@ jobs:
           dst_token: ${{ secrets.GITEE_PRIVATE_TOKEN }}
           force_update: true
           account_type: org
-          shell_path: ./github/workflows/gitee-sync-shell.sh
+          shell_path: ./.github/workflows/gitee-sync-shell.sh
