@@ -183,12 +183,57 @@ extension ViewController: AgoraRtcEngineDelegate {
         showMessage(title: "Success", text: "Successfully joined the channel as \(self.userRole)")
     }
     
-    // Callback called when a new host joins the channel
+    func rtcEngine(_ engine: AgoraRtcEngineKit, didLeaveChannelWith stats: AgoraChannelStats) {
+        print("didLeaveChannelWithStats == \(stats)")
+    }
+    
+    /// callback when a remote user is joinning the channel, note audience in live broadcast mode will NOT trigger this event
+    /// @param uid uid of remote joined user
+    /// @param elapsed time elapse since current sdk instance join the channel in ms
     func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
-            let videoCanvas = AgoraRtcVideoCanvas()
-            videoCanvas.uid = uid
-            videoCanvas.renderMode = .hidden
-            videoCanvas.view = remoteView
-            agoraEngine.setupRemoteVideo(videoCanvas)
+        let videoCanvas = AgoraRtcVideoCanvas()
+        videoCanvas.uid = uid
+        videoCanvas.renderMode = .hidden
+        videoCanvas.view = remoteView
+        agoraEngine.setupRemoteVideo(videoCanvas)
+    }
+    
+    /// callback when a remote user is leaving the channel, note audience in live broadcast mode will NOT trigger this event
+    /// @param uid uid of remote joined user
+    /// @param reason reason why this user left, note this event may be triggered when the remote user
+    /// become an audience in live broadcasting profile
+    func rtcEngine(_ engine: AgoraRtcEngineKit, didOfflineOfUid uid: UInt, reason: AgoraUserOfflineReason) {
+        let videoCanvas = AgoraRtcVideoCanvas()
+        videoCanvas.uid = uid
+        videoCanvas.view = nil
+        agoraEngine.setupRemoteVideo(videoCanvas)
+    }
+    
+    func rtcEngine(_ engine: AgoraRtcEngineKit, networkQuality uid: UInt, txQuality: AgoraNetworkQuality, rxQuality: AgoraNetworkQuality) {
+        print("uid == \(uid)  txQuality == \(txQuality.rawValue) rxQuality == \(rxQuality.rawValue)")
+    }
+    
+    /// Reports the statistics of the current call. The SDK triggers this callback once every two seconds after the user joins the channel.
+    /// @param stats stats struct
+    func rtcEngine(_ engine: AgoraRtcEngineKit, reportRtcStats stats: AgoraChannelStats) {
+        print("reportRtcStats == \(stats)")
+    }
+    
+    /// Reports the statistics of the uploading local audio streams once every two seconds.
+    /// @param stats stats struct
+    func rtcEngine(_ engine: AgoraRtcEngineKit, localAudioStats stats: AgoraRtcLocalAudioStats) {
+        print("reportRtcStats == \(stats)")
+    }
+    
+    /// Reports the statistics of the video stream from each remote user/host.
+    /// @param stats stats struct
+    func rtcEngine(_ engine: AgoraRtcEngineKit, remoteVideoStats stats: AgoraRtcRemoteVideoStats) {
+        print("remoteVideoStats == \(stats)")
+    }
+    
+    /// Reports the statistics of the audio stream from each remote user/host.
+    /// @param stats stats struct for current call statistics
+    func rtcEngine(_ engine: AgoraRtcEngineKit, remoteAudioStats stats: AgoraRtcRemoteAudioStats) {
+        print("remoteAudioStats == \(stats)")
     }
 }
