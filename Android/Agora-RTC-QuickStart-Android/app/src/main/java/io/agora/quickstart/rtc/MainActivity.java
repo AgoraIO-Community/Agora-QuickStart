@@ -58,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
         }
         // 启用视频模块
         mRtcEngine.enableVideo();
-        // 开启本地预览
-        mRtcEngine.startPreview();
 
         // 创建一个 SurfaceView 对象，并将其作为 FrameLayout 的子对象
         FrameLayout container = findViewById(R.id.local_video_view_container);
@@ -67,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
         container.addView(surfaceView);
         // 将 SurfaceView 对象传入声网实时互动 SDK，设置本地视图
         mRtcEngine.setupLocalVideo(new VideoCanvas(surfaceView, VideoCanvas.RENDER_MODE_FIT, 0));
+        // 开启本地预览
+        mRtcEngine.startPreview();
 
         // 创建 ChannelMediaOptions 对象，并进行配置
         ChannelMediaOptions options = new ChannelMediaOptions();
@@ -74,7 +74,10 @@ public class MainActivity extends AppCompatActivity {
         options.clientRoleType = Constants.CLIENT_ROLE_BROADCASTER;
         // 直播场景下，设置频道场景为 BROADCASTING (直播场景)
         options.channelProfile = Constants.CHANNEL_PROFILE_LIVE_BROADCASTING;
-
+        options.publishMicrophoneTrack = true;
+        options.publishCameraTrack = true;
+        options.autoSubscribeAudio = true;
+        options.autoSubscribeVideo = true;
         // 使用临时 Token 加入频道，自行指定用户 ID 并确保其在频道内的唯一性
         mRtcEngine.joinChannel(token, channelName, 0, options);
     }
@@ -148,5 +151,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 离开频道
         mRtcEngine.leaveChannel();
+
+        RtcEngine.destroy();
     }
 }
