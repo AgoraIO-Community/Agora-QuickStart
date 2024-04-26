@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.SurfaceView;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,14 +33,27 @@ public class MainActivity extends AppCompatActivity {
 
     private final IRtcEngineEventHandler mRtcEventHandler = new IRtcEngineEventHandler() {
         @Override
+        public void onJoinChannelSuccess(String channel, int uid, int elapsed) {
+            super.onJoinChannelSuccess(channel, uid, elapsed);
+            runOnUiThread(() -> {
+                Toast.makeText(MainActivity.this, "Join channel success", Toast.LENGTH_SHORT).show();
+            });
+        }
+
+        @Override
         // 监听频道内的远端用户，获取用户的 uid 信息
         public void onUserJoined(int uid, int elapsed) {
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    // 获取 uid 后，设置远端视频视图
-                    setupRemoteVideo(uid);
-                }
+            runOnUiThread(() -> {
+                // 获取 uid 后，设置远端视频视图
+                setupRemoteVideo(uid);
+            });
+        }
+
+        @Override
+        public void onUserOffline(int uid, int reason) {
+            super.onUserOffline(uid, reason);
+            runOnUiThread(() -> {
+                Toast.makeText(MainActivity.this, "User offline: " + uid, Toast.LENGTH_SHORT).show();
             });
         }
     };
