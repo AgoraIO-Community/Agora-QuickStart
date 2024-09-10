@@ -1,30 +1,29 @@
 # Agora QuickStart
 
+## Introduction
 
-## 简介
+This repository contains QuickStart sample projects for the Agora RTC Native SDK.
 
-此仓库包含 Agora RTC Native SDK 的QuickStart示例项目。
-
-| 平台 | 语言 | 项目位置                                                 | SDK                                                                                                                             |
-| -------- | -------- |------------------------------------------------------| ------------------------------------------------------------------------------------------------------------------------------- |
+| Platform | Language | Project Location                                             | SDK                                                                                                                             |
+| -------- | -------- |-------------------------------------------------------------| ------------------------------------------------------------------------------------------------------------------------------- |
 | Android  | Java     | [Agora-RTC-QuickStart](Android/Agora-RTC-QuickStart-Android) | [RTC Java Video SDK](https://doc.shengwang.cn/doc/rtc/android/resources) |
-| iOS      | Swift    | [Agora-RTC-QuickStart](iOS/Agora-RTC-QuickStart-iOS) | [RTC Swift Video SDK](https://doc.shengwang.cn/doc/rtc/ios/resources) |
+| iOS      | Swift    | [Agora-RTC-QuickStart](iOS/Agora-RTC-QuickStart-iOS)         | [RTC Swift Video SDK](https://doc.shengwang.cn/doc/rtc/ios/resources) |
 
-你可以进入不同平台的项目进行试用或参考源代码。
+You can try out or refer to the source code of the projects for different platforms.
 
-## 反馈
+## Feedback
 
-如果你有任何问题或建议，可以通过 issue 的形式反馈。
+If you have any questions or suggestions, you can provide feedback by creating an issue.
 
-## 相关资源
+## Related Resources
 
-- 你可以先参阅 [常见问题](https://docportal.shengwang.cn/cn/Real-time-Messaging/faq)
-- 如果你想了解更多官方示例，可以参考 [官方 SDK 示例](https://github.com/AgoraIO)
-- 如果你想了解声网 SDK 在复杂场景下的应用，可以参考 [官方场景案例](https://github.com/AgoraIO-usecase)
-- 如果你想了解声网的一些社区开发者维护的项目，可以查看 [社区](https://github.com/AgoraIO-Community)
-- 若遇到问题需要开发者帮助，你可以到 [开发者社区](https://rtcdeveloper.com/) 提问
-- 如果需要售后技术支持, 你可以在 [Agora Dashboard](https://dashboard.agora.io) 提交工单
+- You can first refer to the [FAQ](https://docportal.shengwang.cn/cn/Real-time-Messaging/faq)
+- For more official samples, you can refer to the [Official SDK Samples](https://github.com/AgoraIO)
+- For applications of the Agora SDK in complex scenarios, you can refer to the [Official Use Cases](https://github.com/AgoraIO-usecase)
+- For projects maintained by community developers, you can check out the [Community](https://github.com/AgoraIO-Community)
+- If you need help from developers, you can ask questions in the [Developer Community](https://rtcdeveloper.com/)
+- For after-sales technical support, you can submit a ticket on the [Agora Dashboard](https://dashboard.agora.io)
 
-## 许可证
+## License
 
-示例项目遵守 MIT 许可证。
+The sample projects are licensed under the MIT License.
