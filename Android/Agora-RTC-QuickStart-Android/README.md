@@ -1,50 +1,51 @@
 # Agora-RTC-QuickStart
 
-本示例介绍如何集成声网实时互动 SDK，通过少量代码从 0 开始实现一个简单的实时互动 App，适用于互动直播和视频通话场景。
+*English | [中文](README.zh.md)*
 
-## 前提条件
+This example demonstrates how to integrate the Agora Real-Time Interactive SDK to create a simple real-time interactive app from scratch with minimal code, suitable for interactive live streaming and video calling scenarios.
 
-在实现功能以前，请按照以下要求准备开发环境：
+## Prerequisites
 
-- Android Studio 4.1 以上版本。
-- Android API 级别 16 或以上。
-- 两台运行 Android 4.1 或以上版本的移动设备
-- 可以访问互联网的计算机。如果你的网络环境部署了防火墙，参考[应对防火墙限制](https://doc.shengwang.cn/doc/rtc/android/basic-features/firewall)以正常使用声网服务。
-- 一个有效的声网账号以及声网项目。请参考[开通服务](https://doc.shengwang.cn/doc/rtc/android/get-started/enable-service)从声网控制台获得以下信息：
-  - App ID：声网随机生成的字符串，用于识别你的项目。
-  - 临时 Token：Token 也称为动态密钥，在客户端加入频道时对用户鉴权。临时 Token 的有效期为 24 小时。
+Before implementing the functionality, please prepare your development environment according to the following requirements:
 
-## 运行示例程序
+- Android Studio version 4.1 or above.
+- Android API level 16 or above.
+- Two mobile devices running Android 4.1 or above.
+- A computer with internet access. If your network environment has a firewall, refer to Dealing with [Firewall Restrictions](https://docs.agora.io/en/video-calling/core-functionality/cloud-proxy?platform=android) to use Agora services normally.
+- An active Agora account and an Agora project. Please refer to [Enabling Services](https://docs.agora.io/en/video-calling/get-started/manage-agora-account?platform=android) to obtain the following information from the Agora Console:
+  - App ID：A randomly generated string by Agora to identify your project.
+  - Temporary Token: Also known as a dynamic key, used for user authentication when joining a channel. The temporary token is valid for 24 hours.
 
-这个段落主要讲解了如何编译和运行实例程序。
+## Running the Sample Program
 
-1. 进入到[后台](https://console.shengwang.cn/)项目里，复制后台的 **App Id** 并备注，稍后启动应用时会用到它
-2. （可选）如果开启安全模式，则使用[临时 token 生成器](https://docportal.shengwang.cn/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms#%E8%8E%B7%E5%8F%96%E4%B8%B4%E6%97%B6-token)生成一个频道的RTC产品临时token，复制**频道名**和 **Token** 并备注，稍后启动应用时会用到它
-3. 编辑 `app/src/main/java/io/agora/quickstart/rtc/MainActivity.java`，将你的 AppID 、频道名、Token 分别替换到 `<#Your App ID#>` 、 `<#Your channel name#>`、`<#Your Token#>`
+This section explains how to compile and run the sample program.
+
+1. Go to the [Console project](https://console.agora.io/v2), copy the **App ID** from the backend, and make a note of it, as you will need it when launching the app later.
+2. (Optional) If you enable security mode, use the [Temporary Token Generator](https://docs.agora.io/en/video-calling/get-started/manage-agora-account?platform=android#generate-temporary-tokens) to generate a temporary RTC token for a channel, and make a note of the **Channel Name** and **Token**, as you will need them when launching the app later.
+3. Edit `app/src/main/java/io/agora/quickstart/rtc/MainActivity.java`, replacing `<#Your App ID#>`, `<#Your channel name#>`, and `<#Your Token#>` with your App ID, channel name, and token, respectively.
 
 ```
-// 填写项目的 App ID，可在声网控制台中生成
+// Enter the App ID for your project, which can be generated in the Agora Console
 private String appId = "<#Your App ID#>";
-// 填写频道名
+// Enter the channel name
 private String channelName = "<#Your channel name#>";
-// 填写声网控制台中生成的临时 Token
+// Enter the temporary Token generated in the Agora Console
 private String token = "<#Your Token#>";
 ```
-4. 使用Android Studio打开[Android/Agora-RTC-QuickStart-Android](.)，等待下载依赖并同步成功
+4.Open [Android/Agora-RTC-QuickStart-Android](.) in Android Studio and wait for the dependencies to download and sync successfully.
 
-然后你就可以编译并运行项目了。
+You can then compile and run the project.
 
-## 联系我们
+## Contact Us
 
-- 如果你遇到了困难，可以先参阅 [常见问题](https://docportal.shengwang.cn/cn/Real-time-Messaging/faq)
-- 如果你想了解更多官方示例，可以参考 [官方SDK示例](https://github.com/AgoraIO)
-- 如果你想了解声网SDK在复杂场景下的应用，可以参考 [官方场景案例](https://github.com/AgoraIO-usecase)
-- 如果你想了解声网的一些社区开发者维护的项目，可以查看 [社区](https://github.com/AgoraIO-Community)
-- 完整的 API 文档见 [文档中心](https://docportal.shengwang.cn/cn)
-- 若遇到问题需要开发者帮助，你可以到 [开发者社区](https://rtcdeveloper.com/) 提问
-- 如果需要售后技术支持, 你可以在 [Agora Dashboard](https://dashboard.agora.io) 提交工单
-- 如果发现了示例代码的 bug，欢迎提交 [issue](https://github.com/AgoraIO-Community/Agora-RTC-QuickStart/issues)
+- For potential issues, take a look at our [FAQ](https://docs.agora.io/en/faq) first
+- Dive into [Agora SDK Samples](https://github.com/AgoraIO) to see more tutorials
+- Take a look at [Agora Use Case](https://github.com/AgoraIO-usecase) for more complicated real use case
+- Repositories managed by developer communities can be found at [Agora Community](https://github.com/AgoraIO-Community)
+- You can find full API documentation at [Document Center](https://docs.agora.io/en/)
+- If you encounter problems during integration, you can ask question in [Stack Overflow](https://stackoverflow.com/questions/tagged/agora.io)
+- You can file bugs about this sample at [issue](https://github.com/AgoraIO/API-Examples/issues)
 
-## 代码许可
+## License
 
 The MIT License (MIT)
