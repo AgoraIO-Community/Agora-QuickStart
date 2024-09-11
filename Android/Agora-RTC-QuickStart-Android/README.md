@@ -11,8 +11,8 @@ Before implementing the functionality, please prepare your development environme
 - Android Studio version 4.1 or above.
 - Android API level 16 or above.
 - Two mobile devices running Android 4.1 or above.
-- A computer with internet access. If your network environment has a firewall, refer to Dealing with [Firewall Restrictions](https://doc.shengwang.cn/doc/rtc/android/basic-features/firewall) to use Agora services normally.
-- An active Agora account and an Agora project. Please refer to [Enabling Services](https://doc.shengwang.cn/doc/rtc/android/get-started/enable-service) to obtain the following information from the Agora Console:
+- A computer with internet access. If your network environment has a firewall, refer to Dealing with [Firewall Restrictions](https://docs.agora.io/en/video-calling/core-functionality/cloud-proxy?platform=android) to use Agora services normally.
+- An active Agora account and an Agora project. Please refer to [Enabling Services](https://docs.agora.io/en/video-calling/get-started/manage-agora-account?platform=android) to obtain the following information from the Agora Console:
   - App ID：A randomly generated string by Agora to identify your project.
   - Temporary Token: Also known as a dynamic key, used for user authentication when joining a channel. The temporary token is valid for 24 hours.
 
@@ -20,8 +20,8 @@ Before implementing the functionality, please prepare your development environme
 
 This section explains how to compile and run the sample program.
 
-1. Go to the [Console project](https://console.shengwang.cn/), copy the **App ID** from the backend, and make a note of it, as you will need it when launching the app later.
-2. (Optional) If you enable security mode, use the [Temporary Token Generator](https://docportal.shengwang.cn/cn/Agora%20Platform/get_appid_token?platform=All%20Platforms#%E8%8E%B7%E5%8F%96%E4%B8%B4%E6%97%B6-token) to generate a temporary RTC token for a channel, and make a note of the **Channel Name** and **Token**, as you will need them when launching the app later.
+1. Go to the [Console project](https://console.agora.io/v2), copy the **App ID** from the backend, and make a note of it, as you will need it when launching the app later.
+2. (Optional) If you enable security mode, use the [Temporary Token Generator](https://docs.agora.io/en/video-calling/get-started/manage-agora-account?platform=android#generate-temporary-tokens) to generate a temporary RTC token for a channel, and make a note of the **Channel Name** and **Token**, as you will need them when launching the app later.
 3. Edit `app/src/main/java/io/agora/quickstart/rtc/MainActivity.java`, replacing `<#Your App ID#>`, `<#Your channel name#>`, and `<#Your Token#>` with your App ID, channel name, and token, respectively.
 
 ```

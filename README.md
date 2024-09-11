@@ -8,8 +8,8 @@ This repository contains QuickStart example projects for the Agora RTC Native SD
 
 | Platform | Language | Project Location                                                 | SDK                                                                                                                             |
 | -------- | -------- |------------------------------------------------------| ------------------------------------------------------------------------------------------------------------------------------- |
-| Android  | Java     | [Agora-RTC-QuickStart](Android/Agora-RTC-QuickStart-Android) | [RTC Java Video SDK](https://doc.shengwang.cn/doc/rtc/android/resources) |
-| iOS      | Swift    | [Agora-RTC-QuickStart](iOS/Agora-RTC-QuickStart-iOS) | [RTC Swift Video SDK](https://doc.shengwang.cn/doc/rtc/ios/resources) |
+| Android  | Java     | [Agora-RTC-QuickStart](Android/Agora-RTC-QuickStart-Android) | [RTC Java Video SDK](https://docs.agora.io/en/sdks?platform=android) |
+| iOS      | Swift    | [Agora-RTC-QuickStart](iOS/Agora-RTC-QuickStart-iOS) | [RTC Swift Video SDK](https://docs.agora.io/en/sdks?platform=ios) |
 
 You can access projects on different platforms for trial or to reference the source code.
 
